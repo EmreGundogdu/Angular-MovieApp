@@ -6,13 +6,15 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { MovieComponent } from './movie/movie.component';
 import { MoviesComponent } from './movies/movies.component';
+import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 
 enableProdMode();
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
       MovieComponent,
-      MoviesComponent
+      MoviesComponent,
+      MovieDetailComponent
    ],
   imports: [
     BrowserModule,
