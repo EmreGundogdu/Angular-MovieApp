@@ -9,8 +9,11 @@ import { Movies } from '../movie.datasource';
 })
 export class MoviesComponent implements OnInit {
   title = 'Movie List';
+
   movies = Movies;
-  selectedMovie!:Movie;
+
+  selectedMovie: Movie = new Movie;
+
   onSelect(movie:Movie):void{
     this.selectedMovie = movie;
   }
