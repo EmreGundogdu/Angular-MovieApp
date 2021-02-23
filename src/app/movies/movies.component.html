@@ -3,7 +3,7 @@
     <h2>{{ title }}</h2>
   </div>
   <ul class="list-group list-group-flush">
-    <li *ngFor="let movie of movies" (click)="onSelect(movie)" class="list-group-item">
+    <li *ngFor="let movie of movies" (click)="onSelect(movie)" class="list-group-item" [class.active]="movie===selectedMovie">
       <span class="badge badge-info">{{ movie.id }}</span>{{ movie.name }}
        <span class="close">X</span>
     </li>
