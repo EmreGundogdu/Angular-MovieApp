@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie } from '../movie';
 import { Movies } from '../movie.datasource';
 
 @Component({
@@ -9,6 +10,9 @@ import { Movies } from '../movie.datasource';
 export class MoviesComponent implements OnInit {
   title = 'Movie List';
   movies = Movies;
+  onSelect(movie:Movie):void{
+    
+  }
 
   constructor() {}
 
