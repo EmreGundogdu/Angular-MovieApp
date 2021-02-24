@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { MovieComponent } from './movie/movie.component';
 import { MoviesComponent } from './movies/movies.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
+import { LoggingComponent } from './logging/logging.component';
 
 enableProdMode();
 @NgModule({
@@ -14,7 +15,8 @@ enableProdMode();
     AppComponent,
       MovieComponent,
       MoviesComponent,
-      MovieDetailComponent
+      MovieDetailComponent,
+      LoggingComponent
    ],
   imports: [
     BrowserModule,
