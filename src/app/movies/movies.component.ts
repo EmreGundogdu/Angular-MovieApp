@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Movie } from '../movie';
-import {MovieService } from '../movie.service';
-
+import { MovieService } from '../movie.service';
 
 @Component({
   selector: 'movies',
@@ -10,23 +9,24 @@ import {MovieService } from '../movie.service';
 })
 export class MoviesComponent implements OnInit {
   title = 'Movie List';
-  movies! : Movie[];
-  selectedMovie: Movie = new Movie;
+  movies!: Movie[];
+  selectedMovie: Movie = new Movie();
 
-  onSelect(movie:Movie):void{
+  onSelect(movie: Movie): void {
     this.selectedMovie = movie;
   }
 
-  constructor(private movieService:MovieService) {}
+  constructor(private movieService: MovieService) {}
 
-
-  ngOnInit():void {
+  ngOnInit(): void {
     this.getMovies();
   }
   getTitle() {
     return this.title;
   }
-  getMovies():void{
-    this.movies = this.movieService.getMovies();
+  getMovies(): void {
+    this.movieService.getMovies().subscribe((movies) => {
+      this.movies = movies;
+    });
   }
 }
