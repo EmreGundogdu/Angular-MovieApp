@@ -9,6 +9,8 @@ import { MoviesComponent } from './movies/movies.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { LoggingComponent } from './logging/logging.component';
 import { AppRoutingModule } from './app-routing.module';
+import { NavbarComponent } from './navbar/navbar.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 enableProdMode();
 @NgModule({
@@ -17,7 +19,9 @@ enableProdMode();
       MovieComponent,
       MoviesComponent,
       MovieDetailComponent,
-      LoggingComponent
+      LoggingComponent,
+      NavbarComponent,
+      DashboardComponent
    ],
   imports: [
     BrowserModule,
